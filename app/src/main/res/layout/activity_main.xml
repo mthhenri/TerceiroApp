@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="373dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="6dp"
+        android:ems="10"
+        android:hint="Número 2"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/grupo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num1" />
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="373dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="3dp"
+        android:ems="10"
+        android:hint="Número 1"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/num2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/grupo"
+        android:layout_width="332dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="9dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num2">
+
+        <RadioButton
+            android:id="@+id/somarBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:minHeight="100dp"
+            android:onClick="selecionarBtn"
+            android:text="Somar" />
+
+        <RadioButton
+            android:id="@+id/subBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:onClick="selecionarBtn"
+            android:text="Subtrair" />
+
+        <RadioButton
+            android:id="@+id/multBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:onClick="selecionarBtn"
+            android:text="Multiplicar" />
+
+        <RadioButton
+            android:id="@+id/dividirBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:onClick="selecionarBtn"
+            android:text="Dividir" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="Calcular"
+        android:onClick="calcularConta"
+        app:layout_constraintBottom_toTopOf="@+id/resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grupo" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        android:background="#000000"
+        android:text="..."
+        android:textAlignment="center"
+        android:textColor="#4CAF50"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcular" />
+</androidx.constraintlayout.widget.ConstraintLayout>
